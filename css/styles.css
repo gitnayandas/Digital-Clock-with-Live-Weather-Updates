@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #14ffe9;
+    --secondary-color: #ffeb3b;
+    --tertiary-color: #ff00e0;
+    --background-color: #1b1b1b;
+    --text-color: #fff;
+    --blur1: 10px;
+    --blur2: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #000;
+}
+
+.wrapper {
+    width: 360px;
+    height: 150px;
+    position: relative;
+    cursor: default;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
+    border-radius: 10px;
+    animation: animate 1.5s linear infinite;
+}
+
+.wrapper .display,
+.wrapper span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .display {
+    z-index: 999;
+    background: var(--background-color);
+    height: 135px;
+    width: 345px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .display #time {
+    line-height: 85px;
+    color: var(--text-color);
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+.wrapper .display #date,
+.wrapper .display #weather {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.wrapper span {
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius: 10px;
+}
+
+.wrapper span:first-child {
+    filter: blur(var(--blur1));
+}
+
+.wrapper span:last-child {
+    filter: blur(var(--blur2));
+}
+
+.wrapper:hover .display {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theme-selector,
+.color-picker {
+    margin-bottom: 10px;
+}
+
+.theme-selector label,
+.color-picker label {
+    margin-right: 8px;
+}
+
+.theme-selector select,
+.color-picker input[type="color"] {
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.theme-selector select {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.color-picker input[type="color"] {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--background-color);
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+}

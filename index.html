@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock | Nayan</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="display">
+            <div id="time">12:00:00 PM</div>
+            <div id="date">Sunday, June 16, 2024</div>
+            <div id="weather">Loading weather...</div>
+        </div>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="controls">
+        <div class="theme-selector">
+            <label for="theme">Theme:</label>
+            <select id="theme">
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="colorful">Colorful</option>
+            </select>
+        </div>
+        <div class="color-picker">
+            <label for="primary-color">Primary Color:</label>
+            <input type="color" id="primary-color" value="#14ffe9">
+            <label for="secondary-color">Secondary Color:</label>
+            <input type="color" id="secondary-color" value="#ffeb3b">
+            <label for="tertiary-color">Tertiary Color:</label>
+            <input type="color" id="tertiary-color" value="#ff00e0">
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
