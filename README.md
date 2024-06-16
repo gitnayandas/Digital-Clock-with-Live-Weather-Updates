@@ -9,7 +9,7 @@ This project is a customizable digital clock that displays the current time, dat
 - Color customization for primary, secondary, and tertiary colors
 
 ## Demo
-Check out the [live demo](https://yourusername.github.io/digital-clock-weather).
+Check out the [live demo](https://gitnayandas.github.io/Digital-Clock-with-Live-Weather-Updates).
 
 ## Installation
 1. Clone the repository:
